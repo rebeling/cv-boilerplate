@@ -38,6 +38,7 @@ $endif$
 % Cool ampersand
 \newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
 
+\usepackage[onehalfspacing]{setspace}
 % MARGIN NOTES
 %--------------------------------
 \usepackage{marginnote}
@@ -73,7 +74,6 @@ $endif$
 % DOCUMENT
 %--------------------------------
 \begin{document}
-
 {\LARGE $name$}\\[.2cm]
 
 $if(urls)$
@@ -99,39 +99,76 @@ $endfor$
 \end{multicols}
 $endif$
 
-\vspace{30pt}
+\vspace{23pt}
+
+\section*{Profesional Summary}
+\noindent
 
 $if(intro)$
-$intro$
+$if(intro.title)$
+\subsection*{$intro.title$}
+$endif$
+$intro.text$
 $endif$
 
-\subsection*{Areas of Interest}
 $if(skills)$
+\subsection*{$skills.title$}
 \begin{itemize}
-    $for(skills)$
-      \item $skills$
+  \setlength{\itemsep}{1pt}
+    $for(skills.items)$
+      \item $skills.items$
     $endfor$
 \end{itemize}
 $endif$
 
+$if(workstyle)$
+$if(workstyle.title)$
+\subsection*{$workstyle.title$}
+$endif$
+$workstyle.text$
+$endif$
+
 % \vfill
 
-\vspace{25pt}
+\vspace{21pt}
 
-\section*{Previous Experience}
+\section*{Profesional Experiences}
 \noindent
+
 $for(experience)$
-\note{$experience.years$}\textsc{$experience.employer$}\\
-\emph{$experience.job$}\\
-$experience.city$\\[.2cm]
+\vspace{8pt}
+\note{$experience.years$}\textbf{$experience.job$} - \emph{$experience.institute$}$if(experience.city)$, $experience.city$$endif$
+% $experience.description$
+$for(experience.projects)$
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  $for(experience.projects.items)$
+    \item $experience.projects.items$
+  $endfor$
+\end{itemize}
+$endfor$
 $endfor$
 
+
 $if(education)$
-\section*{Education}
+\section*{$education.title$}
 \noindent
-$for(education)$
-\note{$education.year$}\textbf{$education.subject$}$if(education.degree)$, $education.degree$$endif$\\
-\emph{$education.institute$}$if(education.city)$, $education.city$$endif$\\[.2cm]
+$for(education.items)$
+\note{$education.items.years$}\textbf{$education.items.subject$} - \emph{$education.items.institute$}$if(education.items.city)$, $education.items.city$$endif$\\
+$if(education.items.thesis)$
+{$education.items.thesis.title$}: \emph{$education.items.thesis.topic$}\\
+$endif$
+$if(education.items.grade)$
+{$education.items.grade.title$}: {$education.items.grade.degree$}\\
+$endif$
+$if(education.items.publications)$
+\vspace{-28pt}
+\subsection*{$education.items.publications.title$:}
+$for(education.items.publications.pieces)$
+{$education.items.publications.pieces.people$}; \emph{$education.items.publications.pieces.title$}; {$education.items.publications.pieces.rest$}
+$endfor$\\
+$endif$
+
 $endfor$
 $endif$
 
@@ -139,6 +176,13 @@ $if(languages)$
 \section*{Languages}
 $for(languages)$
 \emph{$languages.language$} ($languages.proficiency$)\\
+$endfor$
+$endif$
+
+$if(interests)$
+\section*{Interests}
+$for(interests)$
+\emph{$interests$}\\
 $endfor$
 $endif$
 

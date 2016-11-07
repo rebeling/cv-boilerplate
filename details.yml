@@ -1,54 +1,143 @@
 ---
 # Personal details
-name: Friedrich Nietzsche
+name: Matthias Rebel
 address:
-- Humboldtstraße 36
-- 99425 Weimar
-- Prussia
-phone: "+49 03643 545400"
-email: friedrich@thevoid.de
-# Insert URLs without http://
+- Schreinerstraße 33
+- 10247 Berlin
+phone: "0162 104 23 33"
+email: matthias.rebel@gmail.com
+# # Insert URLs without http://
 urls:
-- wki.pe/friedrich_nietzsche
-- twitter.com/tinynietzsche
+- rebeling.net
+- twitter.com/_rebeling
+- github.com/rebeling
+- stackoverflow.com/users/494526/rebeling
+
 
 # Sections
 
-intro: "I know my fate. One day my name will be associated with the memory of something tremendous --- a crisis without equal on earth, the most profound collision of conscience, a decision that was conjured up against everything that had been believed, demanded, hallowed so far. I am no man, I am dynamite."
+intro: 
+  # title: "Background"
+  text: "5 years experience in software development and systems engineering in customer projects. Powerful web applications such as online newspapers and archives. Search, information extraction, natural language processing; Distributed, scalable data systems; Diploma in Computational Linguistics. Strong interest in the planning and implementation of scalable applications. Can manage legacy systems."
 
 skills:
-- Aesthetics, Ethics, Metaphysics, Nihilism
-- Psychology, Ontology, Poetry, Value theory
-- Voluntarism, Tragedy, Fact–value distinction
-- Anti-foundationalism, Philosophy of history
+  title: Areas of Interest
+  items:
+    - SOA, Microservices, Continuous Delivery, Open Source
+    - Agile Methodologies, Twelve-Factor App, OKR
+    - Natural language processing, Search engines, Semantics, Automation
+    - Python, AngularJs, ElasticSearch, GIT, Raml, Jenkins, Docker, Marathon 
+
+workstyle: 
+  title: Workstyle
+  text: "Preference to be organized, logical, structured, objective and decisive about what is conceptually valid. Enjoy working with others, especially when taking charge and adding a strategic plan."
 
 experience:
-- years: 1879--1889
-  employer: Freiberufler
-  job: Freier Philisoph
-  city: Sils-Maria
-- years: 1869–-1879
-  employer: Universität Basel
-  job: Professor für klassische Philologie
-  city: Basel
-- years: 1867--1868
-  employer: Preußischen Artillerie
-  job: Kanonier
-  city: Naumburg
+- years: 05/2016--present
+  job: Systems Engineer
+  institute: Retresco GmbH
+  city: Berlin
+  description: Aufgabe beschreiben
+  projects:
+    items:
+      - Requirement analysis, concept creation and project planing
+      - Technical consultancy for Clients and ProjectManagers
+      - Reshape a monolith into services, containerize and apply CD
+      - SLA-Support for Search-, Crawling and TMS-Projects
+      - Research on Evidence based scheduling
+
+- years: 12/2011--04/2016
+  job: Software Developer
+  institute: Retresco GmbH
+  city: Berlin
+  description: Aufgabe beschreiben
+  projects:
+    items:
+      - Searchinterface for a data archive - BE (Python, Tornado, Solr)  
+      - GUI-Design and development of TMS - FE and BE 
+        (AngularJS, Tornado, ElasticSearch) 
+      - Rule based relation extraction in short message (Python Module)
+      - Profile based newssite crawling (Python, Scrapy, Sqlite, XML)
+      - Streamprocessing and Personalization - FE and BE 
+        (Python, Flask, Tornado, Coffescript, Kafka, ElasticSearch)
+
+- years: 05/2009–-04/2011
+  job: Student Researcher
+  institute: Deutsches Forschungszentrum für künstliche Intelligenz
+  city: Berlin
+  projects: 
+    - title: Tasks
+      items:
+        - Developing a multilingual dialog assistent (PHP, Objective-C) 
+        - Improvments on workflow and dialog structures
+
+- years: 03/2006–-02/2009
+  job: Student Researcher
+  institute: Universität Potsdam
+  city: Potsdam
+  projects: 
+    - title: Tasks
+      items:
+        - Word to XML, XSLTransformations (Existdb, Tomcat) 
+        - Search interface / website for the data (Python)
+        # - Simple CMS for stuff websites (Python)
+
+- years: 08/2003–-07/2005
+  job: Media Educator 
+  institute: Pfefferwerk gGmbH
+  city: Berlin
+  projects:
+    - title: Tasks
+      items:
+        - Lectures in computer interaction for kids
+        - Lectures in photoshop and drawing for trainees
+        # - Further education for adults to work with kids
 
 education:
-- year: 1867
-  subject: Philology
-  institute: Leipzig Universität
-  city: Leipzig
-- year: 1864
-  subject: Abitur
-  institute: Schulpforta
-  city: Naumburg
+  title: Education
+  items:
+  - years: 2005--2011
+    subject: Diploma in Computational Linguistics
+    institute: Universität Potsdam
+    city: Potsdam
+    # focus:
+    #   title:
+    thesis:
+      title: Diploma thesis
+      topic: Optimierung der Dialogstrukturen einer bilingualen elektronischen Kommunikationshilfe
+    grade:
+      title: Final Grade
+      degree: 1,5
+    publications: 
+      title: Publication
+      pieces:
+        - people: Sven Schmeier, Matthias Rebel, Renlong Ai
+        - title: Computer Assistance in Bilingual Task-Oriented Human-Human Dialogues
+        - rest: |
+            In Proceedings of the 14th International Conference on Human-Computer Interaction. Human Computer Interaction International Conferences (HCII-2011), July 9-14, Orlando, Florida, United States, Springer, 2011.
+  - years: 1999
+    subject: Abitur
+    institute: Wessenberg Gymnasium
+    city: Konstanz
+
+languages:
+  - language: German 
+    proficiency: native language
+  - language: English
+    proficiency: fluent
+
+# interests:
+#   - Aquaponics
+#   - Basic income
+#   - E-Mobility
 
 # Settings
-mainfont: Hoefler Text
+# mainfont: Hoefler Text
+mainfont: Gill Sans
+altfont: Helvetica Neue
+monofont: Courier
 fontsize: 10pt
 lang: English
 geometry: a4paper, left=35mm, right=35mm, top=51mm, bottom=17mm
+# \usepackage[onehalfspacing]{setspace}
 ---

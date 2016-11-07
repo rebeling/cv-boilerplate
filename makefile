@@ -1,10 +1,11 @@
+.PHONY: cv_matthias_rebel_2016.pdf clean
+
 TEX = pandoc
 src = template.tex details.yml
 FLAGS = --latex-engine=xelatex
 
-output.pdf : $(src)
-	$(TEX) $(filter-out $<,$^ ) -o $@ --template=$< $(FLAGS)
+cv_matthias_rebel_2016.pdf: $(src)
+	$(TEX) $(filter-out $<,$^ ) -o $@ --template=$< $(FLAGS) --verbose
 
-.PHONY: clean
 clean :
 	rm output.pdf
