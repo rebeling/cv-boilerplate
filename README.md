@@ -1,3 +1,6 @@
+Fork note: I used it for my own cv and applied a lot of changes to the yaml
+and tex files. Thanks https://github.com/mrzool for this project ;)
+
 # CV Boilerplate
 
 > I consider LaTeX resumes to be a secret handshake of sorts, something that makes me significantly more likely to be inclined to hire a candidate.  
